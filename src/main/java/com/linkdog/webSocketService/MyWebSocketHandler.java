@@ -42,6 +42,9 @@ public class MyWebSocketHandler extends AbstractWebSocketHandler implements Hand
         // 处理接收到的WebSocket消息
         String payload = message.getPayload();
         System.out.println("接收到消息：" + session);
+        if("close".equals(message.getPayload().substring(0,5))){
+            userMap.remove(message.getPayload().substring(5));
+        }
 
         // 发送回复消息给客户端
         String replyMessage = "收到消息：" + session;
