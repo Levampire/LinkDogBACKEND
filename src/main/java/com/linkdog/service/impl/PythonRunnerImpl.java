@@ -36,6 +36,7 @@ public class PythonRunnerImpl implements PythonRunner {
         long end = 0L;
         String result = "";
         List<String> arguments = new ArrayList<>();
+        arguments.add(path);
         int re = 0;
         boolean errorflag = true;
         try {
