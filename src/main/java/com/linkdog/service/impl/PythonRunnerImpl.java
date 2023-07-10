@@ -63,6 +63,7 @@ public class PythonRunnerImpl implements PythonRunner {
                             //推送日志
                             myWebSocketHandler.sendMessageToProject(projectName, composeMessage(s));
                             result = composeMessage(s);
+                            System.out.println(result);
                         }
                     }
                 }
